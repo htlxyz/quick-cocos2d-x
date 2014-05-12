@@ -21,16 +21,19 @@ function Provider:doCommand(args)
     elseif args.command == "setLogEnabled" then
         MobClickCppForLua:setLogEnabled(args.args.value)
     elseif args.command == "startWithAppkey" then
+        args.args.channelId = args.args.channelId or 0
         MobClickCppForLua:startWithAppkey(args.args.appKey, args.args.channelId)
     elseif args.command == "applicationDidEnterBackground" then
         MobClickCppForLua:applicationDidEnterBackground()
     elseif args.command == "applicationWillEnterForeground" then
         MobClickCppForLua:applicationWillEnterForeground()
     elseif args.command == "end" then
-        MobClickCppForLua:end()
+        MobClickCppForLua:endAnalytics()
     elseif args.command == "event" then
+        args.args.label = args.args.label or 0
         MobClickCppForLua:event(args.args.eventId, args.args.label)
     elseif args.command == "eventCustom" then
+        args.args.counter = args.args.counter or 0
         MobClickCppForLua:eventCustom(args.args.eventId, args.args.attributes, args.args.counter)
     elseif args.command == "beginEvent" then
         MobClickCppForLua:beginEvent(args.args.eventId)
@@ -57,7 +60,7 @@ function Provider:doCommand(args)
     elseif args.command == "updateOnlineConfig" then
         MobClickCppForLua:updateOnlineConfig()
     elseif args.command == "getConfigParams" then
-        MobClickCppForLua:getConfigParams(args.args.key)
+        return MobClickCppForLua:getConfigParams(args.args.key)
     elseif args.command == "setUserLevel" then
         MobClickCppForLua:setUserLevel(args.args.level)
     elseif args.command == "setUserInfo" then

@@ -1,6 +1,6 @@
 /*
 ** Lua binding: MobClickCppForLua_luabinding
-** Generated automatically by tolua++-1.0.92 on Thu May  8 14:35:51 2014.
+** Generated automatically by tolua++-1.0.92 on Mon May 12 22:43:16 2014.
 */
 
 #include "MobClickCppForLua_luabinding.h"
@@ -8,7 +8,7 @@
 
 using namespace cocos2d;
 
-#include "MobClickCppForLua.h"
+
 
 
 #include <typeinfo>

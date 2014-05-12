@@ -29,3 +29,4 @@ cc.ui = import(".ui.init")
 -- load extensions
 cc.ad = import(".ad.init").new()
 cc.push = import(".push.init").new()
+cc.analytics = import(".analytics.init").new()

@@ -6,15 +6,14 @@ local UmengAnalytics = class("UmengAnalytics")
 function UmengAnalytics.getInstance(interface)
     local providerClass
 
-	if device.platform == "android" then
-        providerClass = import(".umengpush.ProviderAndroid", CURRENT_MODULE_NAME)
+	if device.platform == "android" or device.platform == "ios" then
+        providerClass = import(".umenganalytics.Provider", CURRENT_MODULE_NAME)
     else
         echoError("push.UmengAnalytics.getInstance() - not supported platform %s", device.platform)
         return nil
     end
 
     local provider = providerClass.new(interface)
-    provider:addListener()
 
     return provider
 end
