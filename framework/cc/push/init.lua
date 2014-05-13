@@ -1,3 +1,4 @@
+
 local CURRENT_MODULE_NAME = ...
 
 local providers = {
@@ -24,7 +25,6 @@ function push:ctor()
 end
 
 function push:start(name)
-    print("htl cc.push start")
     if not self.providers_[name] then
         local providerFactoryClass = cc.Registry.newObject(name)
         local provider = providerFactoryClass.getInstance(self)
@@ -38,7 +38,6 @@ function push:start(name)
             self.providers_[DEFAULT_PROVIDER_OBJECT_NAME] = provider
         end
     end
-    print("htl cc.push start exit")
 end
 
 function push:stop(name)
