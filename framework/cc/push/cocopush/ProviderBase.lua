@@ -47,7 +47,7 @@ function ProviderBase:doCommand(args)
             echoError("cc.push.cocopush.ProviderBase:doCommand() - args must be table")
             return 
         end
-        self:delTags()
+        self:delTags(args.args)
     else
         echoError("cc.push.cocopush.ProviderBase:doCommand() - invaild command:" .. args.command)
     end
