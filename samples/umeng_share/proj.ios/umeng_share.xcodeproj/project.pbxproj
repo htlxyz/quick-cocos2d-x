@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4914869B19233840000F629C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F456F10615EE0D3500FCF3E2 /* Security.framework */; };
+		4914869D1923385A000F629C /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4914869C1923385A000F629C /* libiconv.dylib */; };
+		4914869F19233890000F629C /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4914869E19233890000F629C /* libsqlite3.dylib */; };
+		491486A1192338BA000F629C /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 491486A0192338BA000F629C /* libstdc++.dylib */; };
+		491486A3192338CF000F629C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 491486A2192338CF000F629C /* libz.dylib */; };
 		49BE045E19221B2500060C02 /* UMSocialLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49BE044419221B2500060C02 /* UMSocialLocalizable.strings */; };
 		49BE045F19221B2500060C02 /* libUMSocial_Sdk_3.3.7.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49BE045219221B2500060C02 /* libUMSocial_Sdk_3.3.7.a */; };
 		49BE046019221B2500060C02 /* UMSCommentDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49BE045419221B2500060C02 /* UMSCommentDetailController.xib */; };
@@ -66,6 +71,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4914869C1923385A000F629C /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		4914869E19233890000F629C /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		491486A0192338BA000F629C /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		491486A2192338CF000F629C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		49BE044519221B2500060C02 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/UMSocialLocalizable.strings; sourceTree = "<group>"; };
 		49BE044719221B2500060C02 /* UMSocial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocial.h; sourceTree = "<group>"; };
 		49BE044819221B2500060C02 /* UMSocialAccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialAccountManager.h; sourceTree = "<group>"; };
@@ -144,6 +153,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				491486A3192338CF000F629C /* libz.dylib in Frameworks */,
+				491486A1192338BA000F629C /* libstdc++.dylib in Frameworks */,
+				4914869F19233890000F629C /* libsqlite3.dylib in Frameworks */,
+				4914869D1923385A000F629C /* libiconv.dylib in Frameworks */,
+				4914869B19233840000F629C /* Security.framework in Frameworks */,
 				49BE047519221CFF00060C02 /* libSocialQQ.a in Frameworks */,
 				F4323CF716D3298E0072B773 /* libquickcocos2dx.a in Frameworks */,
 				F452BFD01687F0F200DC5BCC /* UIKit.framework in Frameworks */,
@@ -270,6 +284,10 @@
 		F456ECC415EE018E00FCF3E2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				491486A2192338CF000F629C /* libz.dylib */,
+				491486A0192338BA000F629C /* libstdc++.dylib */,
+				4914869E19233890000F629C /* libsqlite3.dylib */,
+				4914869C1923385A000F629C /* libiconv.dylib */,
 				F4949C781699553B00DB561E /* AddressBook.framework */,
 				F456ECCB15EE018E00FCF3E2 /* AudioToolbox.framework */,
 				F456ECCD15EE018E00FCF3E2 /* AVFoundation.framework */,
@@ -662,6 +680,7 @@
 					"-lxml2",
 					"-lz",
 					"-ObjC",
+					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -738,6 +757,7 @@
 					"-lxml2",
 					"-lz",
 					"-ObjC",
+					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

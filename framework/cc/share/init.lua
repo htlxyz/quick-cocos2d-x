@@ -18,6 +18,7 @@ local DEFAULT_PROVIDER_OBJECT_NAME = "share.default"
 
 function share:ctor()
     cc.GameObject.extend(self):addComponent("components.behavior.EventProtocol"):exportMethods()
+    self.events = import(".events", CURRENT_MODULE_NAME)
     self.umengShareMedia = import(".UmengShareMedia", CURRENT_MODULE_NAME)
     self.providers_ = {}
 end

@@ -8,8 +8,6 @@ function ProviderBase:ctor(interface)
 end
 
 function ProviderBase:callback_(event)
-	echoInfo("cc.share.UmengShare.ProviderBase:callback() - event:" .. event)
-
     local infos = string.split(event, "|")
     local evt = {
     provider = "share.UmengShare",
